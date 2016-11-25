@@ -32,6 +32,10 @@ angular
         templateUrl: 'pg/views/home/index.html',
         controller: 'homeCtrl',
       },
+      'footer@home': {
+        templateUrl: 'pg/templates/footer.html',
+        controller: 'homeCtrl',
+      },
       'header@home': {
         templateUrl: 'pg/views/home/header.html',
         controller: 'homeCtrl',
