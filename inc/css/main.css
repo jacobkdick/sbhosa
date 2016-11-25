@@ -2,8 +2,9 @@
  * Table of Contents
  * 
  * 1. GENERAL
- *     - Templates
+ *     - TEMPLATES
  * 2. HOME
+ *     - SIDEBAR
  * 
  * ****************/
 
@@ -40,4 +41,10 @@ textarea {
   background-image: url('../img/jumps.png');
   background-size: cover;
   background-position: center 43%;
+}
+
+/* SIDEBAR */
+.important-dates-panel {
+  max-height: 400px;
+  overflow-y: scroll;
 }

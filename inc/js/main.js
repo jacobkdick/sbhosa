@@ -39,9 +39,13 @@ angular
       'navbar@home': {
         templateUrl: 'pg/templates/navbar.html',
         controller: 'homeCtrl',
-      }
+      },
+      'sidebar@home': {
+        templateUrl: 'pg/views/home/sidebar.html',
+        controller: 'homeCtrl',
+      },
     },
-  })
+  });
   /*.state('login', {
     url: '/login',
     views: {
