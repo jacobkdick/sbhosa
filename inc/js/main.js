@@ -32,6 +32,10 @@ angular
         templateUrl: 'pg/views/home/index.html',
         controller: 'homeCtrl',
       },
+      'navbar@home': {
+        templateUrl: 'pg/templates/navbar.html',
+        controller: 'homeCtrl',
+      }
     },
   })
   /*.state('login', {
@@ -59,4 +63,34 @@ angular
       $state.go('home');
     }
   });
-}]);
+}])
+.constant('NAV_LINKS', {
+  internal: [
+    {
+      name: 'Home',
+      sref: 'home',
+    },
+    {
+      name: 'Services',
+      sref: 'services',
+    },
+    {
+      name: 'Values',
+      sref: 'values',
+    },
+    {
+      name: 'Contact',
+      sref: 'contact',
+    },
+  ],
+  external: [
+    {
+      name: 'IRS',
+      href: 'https://www.irs.gov/',
+    },
+    {
+      name: 'QuickBooks Online',
+      href: 'https://qbo.intuit.com/qbo36/login',
+    },
+  ],
+});
