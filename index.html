@@ -1,9 +1,46 @@
 <!doctype html>
-<html>
+<html ng-app="jacobApp">
 <head>
-	<title>HOSA | Swansboro High School</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HOSA | Swansboro High School</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="inc/main.css">
+  
 </head>
 <body>
-	
+
+  <div ui-view></div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+  <script src="//www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+  <script src="//cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
+
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBtgpdA2CtCtbsdqVx8hh6lGhySI9urfYw",
+      authDomain: "shshosa-58f1a.firebaseapp.com",
+      databaseURL: "https://shshosa-58f1a.firebaseio.com",
+      storageBucket: "shshosa-58f1a.appspot.com",
+      messagingSenderId: "538627256489"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <script src="inc/main.js"></script>
+  <script src="inc/scripts/auth.factory.js"></script>
+  <script src="pg/views/admin/admin.controller.js"></script>
+  <script src="pg/views/home/home.controller.js"></script>
+  <script src="pg/views/login/login.controller.js"></script>
+
 </body>
 </html>
