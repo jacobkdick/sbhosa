@@ -44,6 +44,10 @@ angular
         templateUrl: 'pg/views/home/sidebar.html',
         controller: 'homeCtrl',
       },
+      'tabs@home': {
+        templateUrl: 'pg/views/home/tabs.html',
+        controller: 'homeCtrl',
+      },
     },
   });
   /*.state('login', {
