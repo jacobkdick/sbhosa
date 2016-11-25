@@ -8,6 +8,23 @@ angular
   $scope.siteNavLinks = NAV_LINKS.internal;
   
   $scope.user = Auth.$getAuth();
+  $scope.signOut = function () {
+    Auth.$signOut();
+    $scope.user = null;
+    Auth.$onAuthStateChanged(function (firebaseUser) {
+      if (firebaseUser) {
+        $scope.user = firebaseUser;
+        $scope.errorNotice = 'Unable to sign out.';
+      } else {
+        $state.go('home');
+      }
+    });
+  };
+  
+  if ($scope.user) {
+    $state.go('admin');
+  }
+  
   $scope.loginUser = {
     email: null,
     password: null,
@@ -18,10 +35,12 @@ angular
     
     Auth.$signInWithEmailAndPassword($scope.loginUser.email, $scope.loginUser.password)
     .then(function (firebaseUser) {
+      console.log('Login success.');
       $state.go('admin');
     }).catch(function (err) {
       $scope.error = 'Error signing in.';
       console.error('Auth failed: ', err);
+      $scope.loginUser.password = null;
     });
   };
 }]);

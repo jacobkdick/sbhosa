@@ -9,22 +9,30 @@ angular
 ])
 .config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider
-  /*.state('admin', {
+  .state('admin', {
     url: '/admin',
     views: {
       '': {
         templateUrl: 'pg/views/admin/index.html',
         controller: 'adminCtrl',
       },
+      'footer@admin': {
+        templateUrl: 'pg/templates/footer.html',
+        controller: 'adminCtrl',
+      },
+      'navbar@admin': {
+        templateUrl: 'pg/templates/navbar.html',
+        controller: 'adminCtrl',
+      },
     },
     resolve: {
-      auth: function ($state, authFac) {
-        return authFac.$requireSignIn().catch(function () {
-          $state.go('home');
+      auth: function ($state, Auth) {
+        return Auth.$requireSignIn().catch(function () {
+          $state.go('login');
         });
       }
     },
-  })*/
+  })
   .state('home', {
     url: '/',
     views: {

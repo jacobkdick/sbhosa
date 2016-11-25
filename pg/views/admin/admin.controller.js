@@ -4,7 +4,7 @@
 
 angular
 .module('hosaApp')
-.controller('homeCtrl', ['$scope', '$state', 'Auth', 'NAV_LINKS', function ($scope, $state, Auth, NAV_LINKS) {
+.controller('adminCtrl', ['$scope', '$state', 'Auth', 'NAV_LINKS', function ($scope, $state, Auth, NAV_LINKS) {
   $scope.siteNavLinks = NAV_LINKS.internal;
   
   $scope.user = Auth.$getAuth();
