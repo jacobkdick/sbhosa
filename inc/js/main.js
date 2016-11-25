@@ -53,16 +53,28 @@ angular
         controller: 'homeCtrl',
       },
     },
-  });
-  /*.state('login', {
+  })
+  .state('login', {
     url: '/login',
     views: {
       '': {
         templateUrl: 'pg/views/login/index.html',
         controller: 'loginCtrl',
       },
+      'footer@login': {
+        templateUrl: 'pg/templates/footer.html',
+        controller: 'loginCtrl',
+      },
+      'loginCard@login': {
+        templateUrl: 'pg/views/login/loginCard.html',
+        controller: 'loginCtrl',
+      },
+      'navbar@login': {
+        templateUrl:  'pg/templates/navbar.html',
+        controller: 'loginCtrl',
+      },
     },
-  });*/
+  });
 
   $urlRouterProvider.otherwise('/');
 })
