@@ -32,6 +32,7 @@ h6,
 div,
 p {
   font-family: 'Lato';
+  font-weight: 400;
 }
 
 textarea {
@@ -85,6 +86,16 @@ textarea {
     color: #d73814;
 }
 
+.page-header,
+.section-header {
+  font-family: 'Montserrat', sans-serif;
+  color: #14678E;
+}
+
+.section-header {
+  margin-bottom: 20px;
+}
+
 /* TEMPLATES */
 .footer {
   position: absolute;
@@ -98,14 +109,44 @@ textarea {
   padding-top: 20px;
 }
 
+.topnav {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.small-hr {
+  background: #841619;
+  width: 140px;
+  height: 4px;
+  margin: 20px 0 40px;
+}
+
+.lead {
+  font-size: 18px;
+  font-weight: 400;
+  color: #777;
+}
+
+.top-pad {
+  /* Necessary for .navbar-static-top */
+  margin-top: 100px;
+}
+
 /*******************
  * 2. HOME
  * ****************/
+.main {
+  margin-top: 50px;
+}
+
 .jumbotron {
   height: 300px;
   background-image: url('../img/jumps.png');
   background-size: cover;
   background-position: center 43%;
+}
+
+.header {
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* SIDEBAR */
@@ -202,4 +243,12 @@ textarea {
 
 .table-inline-edit {
   cursor: pointer;
+}
+
+th {
+  text-transform: uppercase;
+}
+
+.well-light {
+  background: #f8f8f8;
 }

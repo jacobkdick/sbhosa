@@ -6,7 +6,14 @@
   	</div>
   </div>
   
-	<h3>Important Dates</h3>
+	<h2 class="section-header">Important Dates</h2>
+  <p class="lead">
+  	Use this tool to control the sidebar on the home page. Any new changes
+    will be automatically displayed on the home page.
+  </p>
+  <hr class="small-hr">
+  
+  <div class="well well-sm well-light">
 	<table class="table table-hover table-responsive">
 		<thead>
 			<tr>
@@ -25,28 +32,28 @@
             <td class="col-xs-2">
 							<span ng-hide="showImportantDatesForm">{{ date.name }}</span>
               
-              <input type="text" ng-show="showImportantDatesForm" class="form-control input-sm" id="importantDateName" onclick="this.select()" ng-model="date.name" />
+              <input type="text" ng-show="showImportantDatesForm" class="form-control input-sm" id="importantDateName" onclick="this.select()" ng-model="date.name" placeholder="Name" />
             </td>
 
             <!-- location -->
             <td class="col-xs-2">
 							<span ng-hide="showImportantDatesForm">{{ date.location }}</span>
               
-              <input type="text" ng-show="showImportantDatesForm" class="form-control input-sm" id="importantDateLocation" onclick="this.select()" ng-model="date.location" />
+              <input type="text" ng-show="showImportantDatesForm" class="form-control input-sm" id="importantDateLocation" onclick="this.select()" ng-model="date.location" placeholder="Location" />
             </td>
 
             <!-- startDate -->
             <td class="col-xs-2">
 							<span ng-hide="showImportantDatesForm">{{ date.startDate }}</span>
               
-              <input type="text" ng-show="showImportantDatesForm" class="form-control input-sm" id="importantDateStartDate" onclick="this.select()" ng-model="date.startDate" />
+              <input type="text" ng-show="showImportantDatesForm" class="form-control input-sm" id="importantDateStartDate" onclick="this.select()" ng-model="date.startDate" placeholder="2017-04-29" />
             </td>
 
             <!-- endDate -->
             <td class="col-xs-2">
 							<span ng-hide="showImportantDatesForm">{{ date.endDate }}</span>
               
-              <input type="text" ng-show="showImportantDatesForm" class="form-control input-sm" id="importantDateEndDate" onclick="this.select()" ng-model="date.endDate" />
+              <input type="text" ng-show="showImportantDatesForm" class="form-control input-sm" id="importantDateEndDate" onclick="this.select()" ng-model="date.endDate" placeholder="2017-04-29" />
             </td>
 
             <!-- description -->
@@ -54,7 +61,7 @@
 							<span ng-hide="showImportantDatesForm" class="text-preserve">{{ date.description }}</span>
               
               <span ng-show="showImportantDatesForm">
-              	<textarea id="importantDateDescription{{ $index }}" rows="8" class="form-control input-sm" onclick="this.select()" ng-model="date.description"></textarea>
+              	<textarea id="importantDateDescription{{ $index }}" rows="8" class="form-control input-sm" onclick="this.select()" ng-model="date.description" placeholder="Description"></textarea>
               </span>
               
             </td>
@@ -113,4 +120,5 @@
   </table>
   
   <a href="" ng-click="showNewImportantDateForm = true" class="text-success"><i class="fa fa-lg fa-plus"></i> New Date</a>
+    </div>
 </div>
