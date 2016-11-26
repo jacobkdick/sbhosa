@@ -4,10 +4,11 @@
 
 angular
 .module('hosaApp')
-.controller('homeCtrl', ['$firebaseArray', '$scope', '$state', 'Auth', 'NAV_LINKS',
-function ($firebaseArray, $scope, $state, Auth, NAV_LINKS) {
+.controller('homeCtrl', ['$firebaseArray', '$scope', '$state', 'Auth', 'moment', 'NAV_LINKS',
+function ($firebaseArray, $scope, $state, Auth, moment, NAV_LINKS) {
   $scope.siteNavLinks = NAV_LINKS.internal;
   
+  // Auth
   $scope.user = Auth.$getAuth();
   $scope.signOut = function () {
     Auth.$signOut();
@@ -22,6 +23,8 @@ function ($firebaseArray, $scope, $state, Auth, NAV_LINKS) {
     });
   };
   
+  // Get importantDates from Firebase, sort by startDate
   var importantDatesRef = firebase.database().ref('home/importantDates');
-  $scope.importantDates = $firebaseArray(importantDatesRef);
+  var importantDatesQuery = importantDatesRef.orderByChild('startDate');
+  $scope.importantDates = $firebaseArray(importantDatesQuery);
 }]);

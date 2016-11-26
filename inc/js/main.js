@@ -6,6 +6,7 @@ angular
 .module('hosaApp', [
   'firebase',
   'ui.router',
+  'angularMoment',
 ])
 .config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider

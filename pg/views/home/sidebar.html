@@ -3,12 +3,11 @@
 		<h3 class="panel-title">Important Dates</h3>
 	</div>
   <div class="panel-body list-group important-dates-panel">
-  	<a href="" class="list-group-item" ng-repeat="date in importantDates">
-  		<h4 class="list-group-item-heading">{{ date.startDate }} - {{ date.endDate }}</h4>
+  	<a href="" class="list-group-item" ng-repeat="date in importantDates" data-toggle="modal" data-target="#modal{{ $index }}">
+  		<h4 class="list-group-item-heading">{{ date.startDate | amDateFormat:'MMM D'}}<span ng-if="date.startDate != date.endDate && date.endDate != null"> &ndash; {{ date.endDate | amDateFormat:'MMM D' }}</span></h4>
       <p class="list-group-item-text">
-      	<b>{{ date.name }}</b><br />
-        <small>{{ date.location }}</small><br />
-        {{ date.description }}
+      	&nbsp;<b>{{ date.name }}</b><br />
+        &nbsp;<small>{{ date.location }}</small>
       </p>
   	</a>
   </div>
@@ -18,4 +17,25 @@
 <div class="hidden-sm hidden-xs">
 	<a class="twitter-timeline" data-height="600" data-theme="light" href="https://twitter.com/SwansboroHOSA">Tweets by SwansboroHOSA</a>
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+<!-- importantDates modals -->
+<div class="modal fade" ng-repeat="date in importantDates" id="modal{{ $index }}" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3 class="modal-title">
+					{{ date.name }}
+          &nbsp;&nbsp;
+          <small>{{ date.startDate | amDateFormat:'MMM D'}}<span ng-if="date.startDate != date.endDate && date.endDate != null"> &ndash; {{ date.endDate | amDateFormat:'MMM D' }}</span></small>
+				</h3>
+			</div>
+      
+      <div class="modal-body">
+      	<p class="lead text-preserve">{{ date.description }}</p>
+      </div>
+      
+      <div class="modal-footer"></div>
+		</div>
+	</div>
 </div>

@@ -4,10 +4,11 @@
 
 angular
 .module('hosaApp')
-.controller('adminCtrl', ['$firebaseArray', '$scope', '$state', 'Auth', 'NAV_LINKS',
-function ($firebaseArray, $scope, $state, Auth, NAV_LINKS) {
+.controller('adminCtrl', ['$firebaseArray', '$scope', '$state', 'Auth', 'moment', 'NAV_LINKS',
+function ($firebaseArray, $scope, $state, Auth, moment, NAV_LINKS) {
   $scope.siteNavLinks = NAV_LINKS.internal;
   
+  // Auth
   $scope.user = Auth.$getAuth();
   $scope.signOut = function () {
     Auth.$signOut();
@@ -21,12 +22,17 @@ function ($firebaseArray, $scope, $state, Auth, NAV_LINKS) {
       }
     });
   };
+  
+  // Notifications
+  $scope.noticeError = null;
   $scope.noticeSuccess = null;
   
+  // Get importantDates from Firebase, sort by startDate
   var importantDatesRef = firebase.database().ref('home/importantDates');
   var importantDatesQuery = importantDatesRef.orderByChild('startDate');
   $scope.importantDates = $firebaseArray(importantDatesQuery);
   
+  // Set newImportantDate to bind to $scope
   $scope.newImportantDate = {
     name: '',
     location: '',
@@ -35,7 +41,12 @@ function ($firebaseArray, $scope, $state, Auth, NAV_LINKS) {
     description: '',
   };
   
-  $scope.addDate = function () {    
+  /*
+   * addDate()
+   * 
+   * Adds an item to importantDates Firebase array.
+   */
+  $scope.addDate = function () {
     var newDate = $scope.newImportantDate;
     
     $scope.importantDates.$add(newDate)
@@ -51,9 +62,14 @@ function ($firebaseArray, $scope, $state, Auth, NAV_LINKS) {
     });
   };
   
+  /*
+   * refreshBindings()
+   * 
+   * Reloads database connection to update and sort table.
+   */
   $scope.refreshBindings = function () {
     var importantDatesRef = firebase.database().ref('home/importantDates');
-  var importantDatesQuery = importantDatesRef.orderByChild('startDate');
-  $scope.importantDates = $firebaseArray(importantDatesQuery);
+    var importantDatesQuery = importantDatesRef.orderByChild('startDate');
+    $scope.importantDates = $firebaseArray(importantDatesQuery);
   };
 }]);

@@ -19,6 +19,7 @@
 			<tr>
 				<th class="col-xs-2">Name</th>
         <th class="col-xs-2">Location</th>
+        <!-- <th class="col-xs-4">Start/End Date</th> -->
         <th class="col-xs-2">Start Date</th>
         <th class="col-xs-2">End Date</th>
         <th class="col-xs-3">Description</th>
@@ -42,18 +43,24 @@
               <input type="text" ng-show="showImportantDatesForm" class="form-control input-sm" id="importantDateLocation" onclick="this.select()" ng-model="date.location" placeholder="Location" />
             </td>
 
+            <!-- startDate/endDate -->
+            <!-- <td class="col-xs-4">
+            							<span ng-hide="showImportantDatesForm">{{ date.startDate | amDateFormat:'MMM D' }} <em>to</em> {{ date.endDate | amDateFormat:'MMM D' }}</span>
+              
+              
+            </td> -->
             <!-- startDate -->
             <td class="col-xs-2">
-							<span ng-hide="showImportantDatesForm">{{ date.startDate }}</span>
+            	<span ng-hide="showImportantDatesForm">{{ date.startDate | amDateFormat:'MMM D, YYYY' }}</span>
               
-              <input type="text" ng-show="showImportantDatesForm" class="form-control input-sm" id="importantDateStartDate" onclick="this.select()" ng-model="date.startDate" placeholder="2017-04-29" />
+              <input type="text" ng-show="showImportantDatesForm" class="form-control input-sm" id="importantDateStartDate" onclick="this.select()" ng-model="date.startDate" placeholder="4/29/2017" />
             </td>
-
+            
             <!-- endDate -->
             <td class="col-xs-2">
-							<span ng-hide="showImportantDatesForm">{{ date.endDate }}</span>
+            	<span ng-hide="showImportantDatesForm">{{ date.endDate | amDateFormat:'MMM D, YYYY' }}</span>
               
-              <input type="text" ng-show="showImportantDatesForm" class="form-control input-sm" id="importantDateEndDate" onclick="this.select()" ng-model="date.endDate" placeholder="2017-04-29" />
+              <input type="text" ng-show="showImportantDatesForm" class="form-control input-sm" id="importantDateEndDate" onclick="this.select()" ng-model="date.endDate" placeholder="4/29/2017" />
             </td>
 
             <!-- description -->
@@ -97,12 +104,12 @@
 
         <!-- startDate -->
         <td class="col-xs-2">
-					<input type="text" class="form-control input-sm" id="newImportantDateStartDate" onclick="this.select()" ng-model="newImportantDate.startDate" placeholder="2017-04-29" />
+					<input type="text" class="form-control input-sm" id="newImportantDateStartDate" onclick="this.select()" ng-model="newImportantDate.startDate" placeholder="4/29/2017" />
         </td>
 
         <!-- endDate -->
         <td class="col-xs-2">
-					<input type="text" class="form-control input-sm" id="newImportantDateEndDate" onclick="this.select()" ng-model="newImportantDate.endDate" placeholder="2017-04-29" />
+					<input type="text" class="form-control input-sm" id="newImportantDateEndDate" onclick="this.select()" ng-model="newImportantDate.endDate" placeholder="4/29/2017" />
         </td>
 
         <!-- description -->
