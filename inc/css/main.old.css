@@ -1,0 +1,341 @@
+/*******************
+ * Table of Contents
+ * 
+ * 1. GENERAL
+ *     - NOTICES
+ *     - TEMPLATES
+ * 2. HOME
+ *     - SIDEBAR
+ * 3. LOGIN
+ * 4. ADMIN
+ * 
+ * ****************/
+
+/*******************
+ * 1. GENERAL
+ * ****************/
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-top: 70px;
+  margin-bottom: 90px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+p {
+  font-family: 'Lato';
+  font-weight: 400;
+}
+
+textarea {
+  resize: none;
+}
+
+.text-preserve {
+  white-space: pre-wrap;
+}
+
+@media (min-width: 1200px) {
+  .text-container {
+    width: 970px;
+  }
+}
+
+/* NOTICES (alternative to alerts) */
+.notice {
+    padding: 15px;
+    background-color: #fafafa;
+    border-left: 6px solid #7f7f84;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+       -moz-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+            box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+}
+.notice-sm {
+    padding: 10px;
+    font-size: 80%;
+}
+.notice-lg {
+    padding: 35px;
+    font-size: large;
+}
+.notice-success {
+    border-color: #80D651;
+}
+.notice-success>strong {
+    color: #80D651;
+}
+.notice-info {
+    border-color: #45ABCD;
+}
+.notice-info>strong {
+    color: #45ABCD;
+}
+.notice-warning {
+    border-color: #FEAF20;
+}
+.notice-warning>strong {
+    color: #FEAF20;
+}
+.notice-danger {
+    border-color: #d73814;
+}
+.notice-danger>strong {
+    color: #d73814;
+}
+
+.page-header,
+.section-header {
+  font-family: 'Montserrat', sans-serif;
+  color: #14678E;
+}
+
+.page-header {
+  position: relative;
+  padding-bottom: 5%;
+}
+
+.page-header > h1 {
+  font-family: 'Montserrat';
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+.section-header {
+  margin-bottom: 20px;
+}
+
+/* TEMPLATES */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+.footer-text {
+  padding-top: 20px;
+}
+
+.small-hr {
+  background: #841619;
+  width: 140px;
+  height: 4px;
+  margin: 0 auto;
+}
+
+.oversized {
+  margin-bottom: 30px;
+  color: #707070;
+  font-size: 20px;
+  line-height: 1.333333333;
+  font-weight: 400;
+}
+
+.lead {
+  font-size: 18px;
+  font-weight: 400;
+  color: #777;
+}
+
+.banner {
+    padding: 100px 0;
+    color: #f8f8f8;
+    background: url(../img/hosalogo.gif) no-repeat center 60%;
+    background-size: 120%;
+}
+
+.banner h2 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 3em;
+}
+
+.banner ul {
+    margin-bottom: 0;
+}
+
+.banner-social-buttons {
+    float: right;
+    margin-top: 0;
+}
+
+@media(max-width:1199px) {
+    ul.banner-social-buttons {
+        float: left;
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:767px) {
+    .banner h2 {
+        margin: 0;
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+        font-size: 3em;
+    }
+
+    ul.banner-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.banner-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/*******************
+ * 2. HOME
+ * ****************/
+.main {
+  margin-top: -20px;
+}
+
+.jumbotron {
+  height: 300px;
+  background-image: url('../img/jumps.png');
+  background-size: cover;
+  background-position: center 43%;
+}
+
+.header {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* SIDEBAR */
+.important-dates-panel {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+/*******************
+ * 3. LOGIN
+ * ****************/
+.form-signin
+{
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading, .form-signin .checkbox
+{
+  margin-bottom: 10px;
+}
+.form-signin .checkbox
+{
+  font-weight: normal;
+}
+.form-signin .form-control
+{
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.form-signin .form-control:focus
+{
+  z-index: 2;
+}
+.form-signin input[type="text"]
+{
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"]
+{
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.account-wall
+{
+  margin-top: 20px;
+  padding: 40px 0px 20px 0px;
+  background-color: #f7f7f7;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.login-title
+{
+  color: #555;
+  font-size: 18px;
+  font-weight: 400;
+  display: block;
+}
+.profile-img
+{
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 10px;
+  display: block;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.need-help
+{
+  margin-top: 10px;
+}
+.new-account
+{
+  display: block;
+  margin-top: 10px;
+}
+
+/*******************
+ * 4. ADMIN
+ * ****************/
+.clickable-row {
+  cursor: pointer;
+}
+
+.table-inline-edit {
+  cursor: pointer;
+}
+
+th {
+  text-transform: uppercase;
+}
+
+.well-light {
+  background: #ffffff;
+}
+
+/*******************
+ * CONTACT
+ * ****************/
+.contact-map {
+  margin-top: 40px;
+}
+
+.contact-address,
+.contact-address > h4 {
+  color: #777;
+  font-weight: 400;
+}
+
+@media(max-width:991px) {
+  .contact-address {
+    margin-top: 25px;
+  }
+}
