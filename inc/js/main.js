@@ -21,6 +21,10 @@ angular
         templateUrl: 'pg/templates/footer.html',
         controller: 'adminCtrl',
       },
+      'header@admin': {
+        templateUrl: 'pg/views/admin/header.html',
+        controller: 'adminCtrl',
+      },
       'importantDates@admin': {
         templateUrl: 'pg/views/admin/importantDates.html',
         controller: 'adminCtrl',

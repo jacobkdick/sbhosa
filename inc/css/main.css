@@ -92,6 +92,15 @@ textarea {
   color: #14678E;
 }
 
+.page-header {
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+  line-height: 1.25;
+  font-weight: 400;
+}
+
 .section-header {
   margin-bottom: 20px;
 }
@@ -111,6 +120,7 @@ textarea {
 
 .topnav {
   font-family: 'Montserrat', sans-serif;
+  color: #14678E !important;
 }
 
 .small-hr {
@@ -118,6 +128,14 @@ textarea {
   width: 140px;
   height: 4px;
   margin: 20px 0 40px;
+}
+
+.oversized {
+  margin-bottom: 30px;
+  color: #707070;
+  font-size: 20px;
+  line-height: 1.333333333;
+  font-weight: 400;
 }
 
 .lead {
@@ -128,7 +146,7 @@ textarea {
 
 .top-pad {
   /* Necessary for .navbar-static-top */
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 /*******************
