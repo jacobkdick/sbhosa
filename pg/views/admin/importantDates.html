@@ -51,7 +51,7 @@
 
             <!-- description -->
             <td class="col-xs-3">
-							<span ng-hide="showImportantDatesForm">{{ date.description }}</span>
+							<span ng-hide="showImportantDatesForm" class="text-preserve">{{ date.description }}</span>
               
               <span ng-show="showImportantDatesForm">
               	<textarea id="importantDateDescription{{ $index }}" rows="5" class="form-control input-sm" onclick="this.select()" ng-model="date.description"></textarea>
