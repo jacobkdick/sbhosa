@@ -11,15 +11,7 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button">More <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="">Competitive Events</a></li>
-              <!--<li class="hidden-md hidden-sm hidden-xs"><a href="">Photos</a></li>-->
-              <!--<li class="divider"></li>-->
-          </ul>
-        </li>
-        <li><a href="">Contact Us</a></li>
+        <li ng-repeat="l in siteNavLinks"><a ui-sref="{{ l.sref }}">{{ l.name }}</a></li>
         <li ng-if="user" ng-click="signOut()"><a href=""><i class="fa fa-sign-out"></i> <b>Log Out</b></a></li>
       </ul>
     </div>

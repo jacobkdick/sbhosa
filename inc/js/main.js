@@ -42,11 +42,48 @@ angular
       }
     },
   })
+  .state('contact', {
+    url: '/contact',
+    views: {
+      '': {
+        templateUrl: 'pg/views/contact/index.html',
+        controller: 'contactCtrl',
+      },
+      'address@contact': {
+        templateUrl: 'pg/views/contact/address.html',
+        controller: 'contactCtrl',
+      },
+      'footer@contact': {
+        templateUrl: 'pg/templates/footer.html',
+        controller: 'contactCtrl',
+      },
+      'form@contact': {
+        templateUrl: 'pg/views/contact/form.html',
+        controller: 'contactCtrl',
+      },
+      'header@contact': {
+        templateUrl: 'pg/views/contact/header.html',
+        controller: 'contactCtrl',
+      },
+      'map@contact': {
+        templateUrl: 'pg/views/contact/map.html',
+        controller: 'contactCtrl',
+      },
+      'navbar@contact': {
+        templateUrl: 'pg/templates/navbar.html',
+        controller: 'contactCtrl',
+      },
+    },
+  })
   .state('home', {
     url: '/',
     views: {
       '': {
         templateUrl: 'pg/views/home/index.html',
+        controller: 'homeCtrl',
+      },
+      'contactBanner@home': {
+        templateUrl: 'pg/templates/contactBanner.html',
         controller: 'homeCtrl',
       },
       'footer@home': {
@@ -116,26 +153,10 @@ angular
       sref: 'home',
     },
     {
-      name: 'Services',
-      sref: 'services',
-    },
-    {
-      name: 'Values',
-      sref: 'values',
-    },
-    {
       name: 'Contact',
       sref: 'contact',
     },
   ],
   external: [
-    {
-      name: 'IRS',
-      href: 'https://www.irs.gov/',
-    },
-    {
-      name: 'QuickBooks Online',
-      href: 'https://qbo.intuit.com/qbo36/login',
-    },
   ],
 });

@@ -20,6 +20,7 @@ html {
 }
 
 body {
+  margin-top: 70px;
   margin-bottom: 90px;
 }
 
@@ -41,6 +42,12 @@ textarea {
 
 .text-preserve {
   white-space: pre-wrap;
+}
+
+@media (min-width: 1200px) {
+  .text-container {
+    width: 970px;
+  }
 }
 
 /* NOTICES (alternative to alerts) */
@@ -93,6 +100,12 @@ textarea {
 }
 
 .page-header {
+  position: relative;
+  padding-bottom: 5%;
+}
+
+.page-header > h1 {
+  font-family: 'Montserrat';
   font-size: 42px;
   text-align: center;
   margin-bottom: 20px;
@@ -127,7 +140,7 @@ textarea {
   background: #841619;
   width: 140px;
   height: 4px;
-  margin: 20px 0 40px;
+  margin: 0 auto;
 }
 
 .oversized {
@@ -144,16 +157,58 @@ textarea {
   color: #777;
 }
 
-.top-pad {
-  /* Necessary for .navbar-static-top */
-  margin-top: 80px;
+.banner {
+    padding: 100px 0;
+    color: #f8f8f8;
+    background: url(../img/hosalogo.gif) no-repeat center 60%;
+    background-size: 120%;
+}
+
+.banner h2 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 3em;
+}
+
+.banner ul {
+    margin-bottom: 0;
+}
+
+.banner-social-buttons {
+    float: right;
+    margin-top: 0;
+}
+
+@media(max-width:1199px) {
+    ul.banner-social-buttons {
+        float: left;
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:767px) {
+    .banner h2 {
+        margin: 0;
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+        font-size: 3em;
+    }
+
+    ul.banner-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.banner-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
 }
 
 /*******************
  * 2. HOME
  * ****************/
 .main {
-  margin-top: 50px;
+  margin-top: -20px;
 }
 
 .jumbotron {
@@ -269,4 +324,23 @@ th {
 
 .well-light {
   background: #f8f8f8;
+}
+
+/*******************
+ * CONTACT
+ * ****************/
+.contact-map {
+  margin-top: 40px;
+}
+
+.contact-address,
+.contact-address > h4 {
+  color: #777;
+  font-weight: 400;
+}
+
+@media(max-width:991px) {
+  .contact-address {
+    margin-top: 25px;
+  }
 }
