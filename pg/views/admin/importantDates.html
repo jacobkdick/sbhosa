@@ -19,7 +19,7 @@
 			</tr>
 		</thead>
     <tbody>
-        <tr ng-repeat="date in importantDates | orderBy: '-startDate'">
+        <tr ng-repeat="date in importantDates">
           <form>
             <!-- name -->
             <td class="col-xs-2">
@@ -53,7 +53,10 @@
             <td class="col-xs-3">
 							<span ng-hide="showImportantDatesForm">{{ date.description }}</span>
               
-              <textarea ng-show="showImportantDatesForm" id="importantDateDescription{{ $index }}" rows="5" class="form-control input-sm" onclick="this.select()" ng-model="date.description"></textarea>
+              <span ng-show="showImportantDatesForm">
+              	<textarea id="importantDateDescription{{ $index }}" rows="5" class="form-control input-sm" onclick="this.select()" ng-model="date.description"></textarea>
+              </span>
+              
             </td>
             
             <!-- edit/delete -->

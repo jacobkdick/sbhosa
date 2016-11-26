@@ -24,7 +24,8 @@ function ($firebaseArray, $scope, $state, Auth, NAV_LINKS) {
   $scope.noticeSuccess = null;
   
   var importantDatesRef = firebase.database().ref('home/importantDates');
-  $scope.importantDates = $firebaseArray(importantDatesRef);
+  var importantDatesQuery = importantDatesRef.orderByChild('startDate');
+  $scope.importantDates = $firebaseArray(importantDatesQuery);
   
   $scope.addDate = function () {    
     var utc = new Date().toJSON().slice(0,10);
@@ -46,6 +47,7 @@ function ($firebaseArray, $scope, $state, Auth, NAV_LINKS) {
   
   $scope.refreshBindings = function () {
     var importantDatesRef = firebase.database().ref('home/importantDates');
-    $scope.importantDates = $firebaseArray(importantDatesRef);
+  var importantDatesQuery = importantDatesRef.orderByChild('startDate');
+  $scope.importantDates = $firebaseArray(importantDatesQuery);
   };
 }]);
