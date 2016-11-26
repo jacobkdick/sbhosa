@@ -20,6 +20,10 @@ angular
         templateUrl: 'pg/templates/footer.html',
         controller: 'adminCtrl',
       },
+      'importantDates@admin': {
+        templateUrl: 'pg/views/admin/importantDates.html',
+        controller: 'adminCtrl',
+      },
       'navbar@admin': {
         templateUrl: 'pg/templates/navbar.html',
         controller: 'adminCtrl',

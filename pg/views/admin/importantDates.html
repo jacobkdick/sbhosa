@@ -1,0 +1,76 @@
+<div class="container">
+  <div ng-show="noticeSuccess" class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+  	<div class="notice notice-success">
+  		<strong>Success!</strong> {{ noticeSuccess }}
+      <span class="pull-right close" ng-click="noticeSuccess = null">&times;</span>
+  	</div>
+  </div>
+  
+	<h3>Important Dates</h3>
+	<table class="table table-hover table-responsive">
+		<thead>
+			<tr>
+				<th class="col-xs-2">Name</th>
+        <th class="col-xs-2">Location</th>
+        <th class="col-xs-2">Start Date</th>
+        <th class="col-xs-2">End Date</th>
+        <th class="col-xs-3">Description</th>
+        <th class="col-xs-1"></th>
+			</tr>
+		</thead>
+    <tbody>
+        <tr ng-repeat="date in importantDates | orderBy: '-startDate'">
+          <form>
+            <!-- name -->
+            <td class="col-xs-2">
+							<span ng-hide="showImportantDatesForm">{{ date.name }}</span>
+              
+              <input type="text" ng-show="showImportantDatesForm" class="form-control input-sm" id="importantDateName" onclick="this.select()" ng-model="date.name" />
+            </td>
+
+            <!-- location -->
+            <td class="col-xs-2">
+							<span ng-hide="showImportantDatesForm">{{ date.location }}</span>
+              
+              <input type="text" ng-show="showImportantDatesForm" class="form-control input-sm" id="importantDateLocation" onclick="this.select()" ng-model="date.location" />
+            </td>
+
+            <!-- startDate -->
+            <td class="col-xs-2">
+							<span ng-hide="showImportantDatesForm">{{ date.startDate }}</span>
+              
+              <input type="text" ng-show="showImportantDatesForm" class="form-control input-sm" id="importantDateStartDate" onclick="this.select()" ng-model="date.startDate" />
+            </td>
+
+            <!-- endDate -->
+            <td class="col-xs-2">
+							<span ng-hide="showImportantDatesForm">{{ date.endDate }}</span>
+              
+              <input type="text" ng-show="showImportantDatesForm" class="form-control input-sm" id="importantDateEndDate" onclick="this.select()" ng-model="date.endDate" />
+            </td>
+
+            <!-- description -->
+            <td class="col-xs-3">
+							<span ng-hide="showImportantDatesForm">{{ date.description }}</span>
+              
+              <textarea ng-show="showImportantDatesForm" id="importantDateDescription" rows="5" class="form-control input-sm" onclick="this.select()" ng-model="date.description"></textarea>
+            </td>
+            
+            <!-- edit/delete -->
+            <td class="col-xs-1">
+              <span ng-hide="showImportantDatesForm">
+              	<a href="" ng-click="showImportantDatesForm = true"><i class="fa fa-lg fa-pencil-square-o text-primary"></i></a>
+                <a href="" ng-click="importantDates.$remove(date)"><i class="fa fa-lg fa-times text-danger"></i></a>
+              </span>
+              <span ng-show="showImportantDatesForm">
+              	<a href="" ng-click="importantDates.$save(date);showImportantDatesForm = false;refreshBindings()"><i class="fa fa-lg fa-check text-success"></i></a>
+                <a href="" ng-click="showImportantDatesForm = false;refreshBindings()"><i class="fa fa-lg fa-ban text-warning"></i></a>
+              </span>
+            </td>
+          </form>
+        </tr>
+    </tbody>
+	</table>
+  
+  <button class="btn btn-primary" ng-click="addDate()">Add Date</button>
+</div>

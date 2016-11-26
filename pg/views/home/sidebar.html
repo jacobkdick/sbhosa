@@ -3,7 +3,14 @@
 		<h3 class="panel-title">Important Dates</h3>
 	</div>
   <div class="panel-body list-group important-dates-panel">
-  	
+  	<a href="" class="list-group-item" ng-repeat="date in importantDates">
+  		<h4 class="list-group-item-heading">{{ date.startDate }} - {{ date.endDate }}</h4>
+      <p class="list-group-item-text">
+      	<b>{{ date.name }}</b><br />
+        <small>{{ date.location }}</small><br />
+        {{ date.description }}
+      </p>
+  	</a>
   </div>
 </div>
 
