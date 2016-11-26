@@ -27,21 +27,27 @@ function ($firebaseArray, $scope, $state, Auth, NAV_LINKS) {
   var importantDatesQuery = importantDatesRef.orderByChild('startDate');
   $scope.importantDates = $firebaseArray(importantDatesQuery);
   
+  $scope.newImportantDate = {
+    name: '',
+    location: '',
+    startDate: '',
+    endDate: '',
+    description: '',
+  };
+  
   $scope.addDate = function () {    
-    var utc = new Date().toJSON().slice(0,10);
-    
-    var newDate = {
-      name: '--------',
-      location: '--------',
-      startDate: '--------',
-      endDate: '--------',
-      description: '--------',
-    };
+    var newDate = $scope.newImportantDate;
     
     $scope.importantDates.$add(newDate)
     .then(function (ref) {
       var data = ref;
       console.log('Added new record with id ' + ref.key);
+      
+      $scope.newImportantDate.name = '';
+      $scope.newImportantDate.location = '';
+      $scope.newImportantDate.startDate = '';
+      $scope.newImportantDate.endDate = '';
+      $scope.newImportantDate.description = '';
     });
   };
   

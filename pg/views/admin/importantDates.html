@@ -54,7 +54,7 @@
 							<span ng-hide="showImportantDatesForm" class="text-preserve">{{ date.description }}</span>
               
               <span ng-show="showImportantDatesForm">
-              	<textarea id="importantDateDescription{{ $index }}" rows="5" class="form-control input-sm" onclick="this.select()" ng-model="date.description"></textarea>
+              	<textarea id="importantDateDescription{{ $index }}" rows="8" class="form-control input-sm" onclick="this.select()" ng-model="date.description"></textarea>
               </span>
               
             </td>
@@ -75,5 +75,42 @@
     </tbody>
 	</table>
   
-  <button class="btn btn-primary" ng-click="addDate()">Add Date</button>
+  <table ng-show="showNewImportantDateForm" class="table table-responsive">
+    <form>
+      <tr>
+        <!-- name -->
+        <td class="col-xs-2">
+          <input type="text" class="form-control input-sm" id="newImportantDateName" onclick="this.select()" ng-model="newImportantDate.name" placeholder="Name" />
+        </td>
+
+        <!-- location -->
+        <td class="col-xs-2">
+					<input type="text" class="form-control input-sm" id="newImportantDateLocation" onclick="this.select()" ng-model="newImportantDate.location" placeholder="Location" />
+        </td>
+
+        <!-- startDate -->
+        <td class="col-xs-2">
+					<input type="text" class="form-control input-sm" id="newImportantDateStartDate" onclick="this.select()" ng-model="newImportantDate.startDate" placeholder="2017-04-29" />
+        </td>
+
+        <!-- endDate -->
+        <td class="col-xs-2">
+					<input type="text" class="form-control input-sm" id="newImportantDateEndDate" onclick="this.select()" ng-model="newImportantDate.endDate" placeholder="2017-04-29" />
+        </td>
+
+        <!-- description -->
+        <td class="col-xs-3">
+          <textarea id="newImportantDateDescription" rows="8" class="form-control input-sm" onclick="this.select()" ng-model="newImportantDate.description" placeholder="Description"></textarea>
+        </td>
+
+        <!-- save/cancel -->
+        <td class="col-xs-1">
+          <a href="" ng-click="addDate();showNewImportantDateForm=false;refreshBindings()"><i class="fa fa-lg fa-check text-success"></i></a>
+          <a href="" ng-click="showNewImportantDateForm=false;refreshBindings()"><i class="fa fa-lg fa-ban text-warning"></i></a>
+        </td>
+      </tr>
+    </form>
+  </table>
+  
+  <a href="" ng-click="showNewImportantDateForm = true" class="text-success"><i class="fa fa-lg fa-plus"></i> New Date</a>
 </div>
