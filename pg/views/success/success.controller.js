@@ -4,7 +4,7 @@
 
 angular
 .module('hosaApp')
-.controller('contactCtrl', ['$scope', '$state', 'Auth', 'NAV_LINKS', function ($scope, $state, Auth, NAV_LINKS) {
+.controller('successCtrl', ['$scope', '$state', 'Auth', 'NAV_LINKS', function ($scope, $state, Auth, NAV_LINKS) {
   $scope.siteNavLinks = NAV_LINKS.internal;
   
   // Auth

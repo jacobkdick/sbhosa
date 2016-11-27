@@ -10,6 +10,35 @@ textarea {
   }
 }
 
+.jumbotron {
+  height: 300px;
+  background-image: url('../img/intro-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+.jumbotron > .container > h1,
+.jumbotron > .container > h1 > small {
+  text-align: center;
+  color: #f8f8f8;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+.jumbotron > .container > h1 {
+  font-weight: 700;
+}
+.jumbotron > .container > hr {
+  max-width: 240px;
+  height: 1px;
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+.message-sent {
+  margin-bottom: 30px;
+  color: #707070;
+  font-size: 20px;
+  line-height: 1.333333333;
+  font-weight: 400;
+}
+
 /*******************
  * STICKY FOOTER
  * ****************/
@@ -179,6 +208,10 @@ body {
     margin: 25px auto 20px;
   }
 /* section-header */
+  .section-header > h2,
+  .section-header > h3 {
+    margin-bottom: 15px;
+  }
   .section-header > h2 {
     color: #14678E;
     font-family: 'Montserrat';
@@ -186,7 +219,13 @@ body {
   .section-header > p {
     color: #777;
     font-size: 16px;
-}
+  }
+  .section-header > hr {
+    background: #EEE;
+    width: 140px;
+    height: 2px;
+    margin: 10px 0 20px;
+  }
 
 .description {
   font-size: 16px;

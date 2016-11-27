@@ -7,6 +7,8 @@ angular
 .controller('loginCtrl', ['$scope', '$state', 'Auth', 'NAV_LINKS', function ($scope, $state, Auth, NAV_LINKS) {
   $scope.siteNavLinks = NAV_LINKS.internal;
   
+  // Auth
+  $scope.Auth = Auth;
   $scope.user = Auth.$getAuth();
   $scope.signOut = function () {
     Auth.$signOut();

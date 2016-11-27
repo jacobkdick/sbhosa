@@ -12,8 +12,8 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         <li ng-repeat="l in siteNavLinks"><a ui-sref="{{ l.sref }}">{{ l.name }}</a></li>
-        <li ng-if="user"><a ui-sref="admin">Admin</a></li>
-        <li ng-if="user" ng-click="signOut()"><a href=""><i class="fa fa-sign-out"></i> <b>Log Out</b></a></li>
+        <li ng-if="Auth.$getAuth()"><a ui-sref="admin">Admin</a></li>
+        <li ng-if="Auth.$getAuth()" ng-click="signOut();Auth.$signOut()"><a href=""><i class="fa fa-sign-out"></i> <b>Log Out</b></a></li>
       </ul>
     </div>
   </div>

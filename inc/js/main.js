@@ -132,6 +132,31 @@ angular
         controller: 'loginCtrl',
       },
     },
+  })
+  .state('success', {
+    url: '/success',
+    views: {
+      '': {
+        templateUrl: 'pg/views/success/index.html',
+        controller: 'successCtrl',
+      },
+      'footer@success': {
+        templateUrl: 'pg/templates/footer.html',
+        controller: 'successCtrl',
+      },
+      'header@success': {
+        templateUrl: 'pg/views/success/header.html',
+        controller: 'successCtrl',
+      },
+      'message@success': {
+        templateUrl: 'pg/views/success/message.html',
+        controller: 'successCtrl',
+      },
+      'navbar@success': {
+        templateUrl: 'pg/templates/navbar.html',
+        controller: 'successCtrl',
+      },
+    },
   });
 
   $urlRouterProvider.otherwise('/');
