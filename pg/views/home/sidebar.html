@@ -25,6 +25,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<h3 class="modal-title">
+          <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times"></i></button>
 					{{ date.name }}
           &nbsp;&nbsp;
           <small>{{ date.startDate | amDateFormat:'MMM D'}}<span ng-if="date.startDate != date.endDate && date.endDate != null"> &ndash; {{ date.endDate | amDateFormat:'MMM D' }}</span></small>
@@ -32,10 +33,8 @@
 			</div>
       
       <div class="modal-body">
-      	<p class="lead text-preserve">{{ date.description }}</p>
+      	<p class="description text-preserve">{{ date.description }}</p>
       </div>
-      
-      <div class="modal-footer"></div>
 		</div>
 	</div>
 </div>

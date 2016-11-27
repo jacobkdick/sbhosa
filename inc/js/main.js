@@ -119,6 +119,10 @@ angular
         templateUrl: 'pg/templates/footer.html',
         controller: 'loginCtrl',
       },
+      'header@login': {
+        templateUrl: 'pg/views/login/header.html',
+        controller: 'loginCtrl',
+      },
       'loginCard@login': {
         templateUrl: 'pg/views/login/loginCard.html',
         controller: 'loginCtrl',
