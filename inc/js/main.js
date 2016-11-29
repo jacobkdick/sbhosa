@@ -42,6 +42,31 @@ angular
       }
     },
   })
+  .state('competitiveEvents', {
+    url: '/competitiveEvents',
+    views: {
+      '': {
+        templateUrl: 'pg/views/competitiveEvents/index.html',
+        controller: 'competitiveEventsCtrl',
+      },
+      'footer@competitiveEvents': {
+        templateUrl: 'pg/templates/footer.html',
+        controller: 'competitiveEventsCtrl',
+      },
+      'header@competitiveEvents': {
+        templateUrl: 'pg/views/competitiveEvents/header.html',
+        controller: 'competitiveEventsCtrl',
+      },
+      'list@competitiveEvents': {
+        templateUrl: 'pg/views/competitiveEvents/list.html',
+        controller: 'competitiveEventsCtrl',
+      },
+      'navbar@competitiveEvents': {
+        templateUrl: 'pg/templates/navbar.html',
+        controller: 'competitiveEventsCtrl',
+      },
+    },
+  })
   .state('contact', {
     url: '/contact',
     views: {
@@ -180,6 +205,10 @@ angular
     {
       name: 'Home',
       sref: 'home',
+    },
+    {
+      name: 'Competition',
+      sref: 'competitiveEvents'
     },
     {
       name: 'Contact',

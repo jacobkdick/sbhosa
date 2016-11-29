@@ -1,0 +1,78 @@
+<div class="container text-container">
+  <div class="row">
+  	<div class="col-sm-6">
+      <div class="section-header">
+        <h3>Health Sciences</h3>
+        <hr />
+      </div>
+
+      <p ng-repeat="link in compEventsLinks" ng-if="link.tag == 'hs'" class="text-muted">
+        <i class="fa fa-file-o"></i>&nbsp;&nbsp;<a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+      </p>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="section-header">
+        <h3>Health Professions</h3>
+        <hr />
+      </div>
+
+      <p ng-repeat="link in compEventsLinks" ng-if="link.tag == 'hp'" class="text-muted">
+        <i class="fa fa-file-o"></i>&nbsp;&nbsp;<a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+      </p>
+    </div>
+  </div>
+	
+  <div class="row">
+  	<div class="col-sm-6">
+      <div class="section-header">
+        <h3>EP</h3>
+        <hr />
+      </div>
+
+      <p ng-repeat="link in compEventsLinks" ng-if="link.tag == 'ep'" class="text-muted">
+        <i class="fa fa-file-o"></i>&nbsp;&nbsp;<a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+      </p>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="section-header">
+        <h3>Leadership</h3>
+        <hr />
+      </div>
+      <p ng-repeat="link in compEventsLinks" ng-if="link.tag == 'l'" class="text-muted">
+        <i class="fa fa-file-o"></i>&nbsp;&nbsp;<a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+      </p>
+    </div>
+  </div>
+  
+	<div class="row">
+		<div class="col-sm-6">
+      <div class="section-header">
+        <h3>Teamwork</h3>
+        <hr />
+      </div>
+
+      <p ng-repeat="link in compEventsLinks" ng-if="link.tag == 't'" class="text-muted">
+        <i class="fa fa-file-o"></i>&nbsp;&nbsp;<a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+      </p>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="section-header">
+        <h3>Recognition</h3>
+        <hr />
+      </div>
+
+      <p ng-repeat="link in compEventsLinks" ng-if="link.tag == 'r'" class="text-muted">
+        <i class="fa fa-file-o"></i>&nbsp;&nbsp;<a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+      </p>
+    </div>
+	</div>
+  
+  <br /><br />
+  
+  <div class="notice notice-info">
+  	<strong><i class="fa fa-asterisk"></i></strong>&nbsp;&nbsp;More information can be found at <a href="http://www.hosa.org/guidelines">National HOSA's website</a>.
+  </div>
+</div>
