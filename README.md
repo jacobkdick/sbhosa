@@ -8,6 +8,6 @@ _Lead developer_
 jacobkdick@gmail.com
 
 **Bogue Dick**  
-_S2S President_  
+_Swansboro HOSA President (2016-2017)_  
 (910) 650-9303  
 boguedick@gmail.com
