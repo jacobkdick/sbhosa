@@ -5,7 +5,7 @@ A website for the Swansboro High School chapter of HOSA.
 **Jacob Dick**  
 _Lead developer_  
 (208) 391-7770  
-jacobkdick@gmail.com
+jacobkdick@outlook.com
 
 **Bogue Dick**  
 _Swansboro HOSA President (2016-2017)_  
