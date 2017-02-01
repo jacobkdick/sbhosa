@@ -1,0 +1,18 @@
+{
+  "rules": {
+    "home": {
+      "importantDates": {
+        ".read": true,
+        ".write": "auth != null"
+      },
+      "schoolFiles": {
+        ".read": true,
+        ".write": "auth != null"
+      }
+    },
+    "competitiveEvents": {
+      ".read": true,
+      ".write": "auth != null"
+    }
+  }
+}
